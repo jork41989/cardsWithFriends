@@ -17,7 +17,8 @@ import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', () => {
             let store;
-            if (localStorage.jwtToken) {
+         
+            if (localStorage.jwtToken != "undefined") {
                 setAuthToken(localStorage.jwtToken);
                 const decodedUser = jwt_decode(localStorage.jwtToken);
                 const preloadedState = {

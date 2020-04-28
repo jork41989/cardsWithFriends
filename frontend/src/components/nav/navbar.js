@@ -36,7 +36,7 @@ class NavBar extends React.Component {
             <Link to={`/users/${this.props.currentUser.id}`} className="profile-link">{this.props.currentUser.username}</Link>
               <button onClick={this.logoutUser}>Logout</button>
 
-            <button onClick={() => this.props.openModal({ modal: 'devs' })}>Meet The Devs</button>
+
             {this.admin()}
           </div>
         );
@@ -46,7 +46,6 @@ class NavBar extends React.Component {
               <button onClick={() => this.props.openModal({modal: 'login'})}>Login</button>
             <button onClick={() => this.props.openModal({modal: 'signup'})}>Create account</button>
 
-            <button onClick={() => this.props.openModal({ modal: 'devs' })}>Meet The Devs</button>
             </div>
         );
       }
@@ -58,10 +57,10 @@ class NavBar extends React.Component {
         <div className="navbar-section">
           <div className="NavBar">
             <div className={'logoDiv'}>
-              <Link to={'/'} className={'logoDiv'} ><h1 className="logo"></h1> <h1 className={'logoText'}>ActionBoxd</h1></Link>
+              <Link to={'/'} className={'logoDiv'} ><h1></h1> <h1 className={'logoText'}>CardsWithFriends</h1></Link>
             </div>
               { this.getLinks() }
-              {/* <Search /> */}
+
           </div>
         </div>
       );
