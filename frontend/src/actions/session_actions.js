@@ -46,8 +46,8 @@ export const login = user => dispatch => {
   .then(() => dispatch(getTheCurUser()))
     .catch(err => {
       dispatch(receiveErrors(err.response.data))
-    }))
-}
+    })
+}))}
 
 
 

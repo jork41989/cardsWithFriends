@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import './navbar.css'
-import Search from "../search/search_bar_component";
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +35,7 @@ class NavBar extends React.Component {
           <div className="nav-links">
             <Link to={`/users/${this.props.currentUser.id}`} className="profile-link">{this.props.currentUser.username}</Link>
               <button onClick={this.logoutUser}>Logout</button>
-            <Search />
+
             <button onClick={() => this.props.openModal({ modal: 'devs' })}>Meet The Devs</button>
             {this.admin()}
           </div>
@@ -45,7 +45,7 @@ class NavBar extends React.Component {
             <div className="nav-links">
               <button onClick={() => this.props.openModal({modal: 'login'})}>Login</button>
             <button onClick={() => this.props.openModal({modal: 'signup'})}>Create account</button>
-            <Search />
+
             <button onClick={() => this.props.openModal({ modal: 'devs' })}>Meet The Devs</button>
             </div>
         );

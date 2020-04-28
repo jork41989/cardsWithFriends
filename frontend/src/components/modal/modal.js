@@ -3,13 +3,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
-import TrailerContainer from '../movies/trailer_container';
-import ReviewsCreateFormContainer from '../reviews/reviews_create_form_container';
-import MovieFormContainer from '../movie-form/movie_form_container';
-import ReviewsEditFormContainer from '../reviews/reviews_edit_form_container';
-import ActorFormContainer from '../actor-form/actor_form_container';
-import AboutDevContainer from '../about-dev/about_dev_container';
-import SettingsContainer from "../profile/settings_container";
+
 
 
 import './modal.css';
@@ -28,27 +22,7 @@ function Modal ({payload, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
-    case 'trailer':
-      component = <TrailerContainer movieId={payload.movieId} />;
-      break;
-    case 'review':
-      component = <ReviewsCreateFormContainer movieId={payload.movieId} />;
-      break;
-    case 'movie':
-      component = <MovieFormContainer />;
-      break;
-    case 'edit-review':
-      component = <ReviewsEditFormContainer movieId={payload.movieId} reviewId={payload.reviewId}/>;
-      break;
-    case 'actor':
-      component = <ActorFormContainer />;
-      break;
-    case 'devs':
-      component = <AboutDevContainer />;
-      break;
-    case 'profilePicture':
-      component = <SettingsContainer userId={payload.userId} profilePicture={payload.profilePicture}/>;
-      break;
+    
     default:
       return null;
   }

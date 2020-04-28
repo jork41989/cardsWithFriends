@@ -7,9 +7,9 @@ import Modal from './modal/modal';
 
 
 
+import MainPage from './main/main_page';
 
 import '../App.css'
-
 
 // import SettingsContainer from './profile/settings_container';
 
